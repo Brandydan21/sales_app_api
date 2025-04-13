@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 # extendeds default django built in model that allws us to handle user auth 
-class CustomUser(AbstractUser):
-    pass
+class User(AbstractUser):
+
     '''
     username = models.CharField(max_length=150)
     first_name = models.CharField(max_length=150, blank=True)
@@ -11,7 +11,7 @@ class CustomUser(AbstractUser):
     email = models.EmailField(blank=True)
     is_staff = models.BooleanField()
     is_active = models.BooleanField()
-    date_joined = models.DateTimeField
+    date_joined = models.DateTimeField()
     '''
     sales_person = models.BooleanField(default=False)
     phone_number = models.CharField(max_length=15)
