@@ -14,6 +14,6 @@ class User(AbstractUser):
     date_joined = models.DateTimeField()
     '''
     sales_person = models.BooleanField(default=False)
-    phone_number = models.CharField(max_length=15)
+    phone_number = models.CharField(max_length=15, unique=True)
 
  

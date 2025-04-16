@@ -71,6 +71,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sales_api.wsgi.application'
 
+# This is telling DRF to use JWT authentication for all API views by default 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
